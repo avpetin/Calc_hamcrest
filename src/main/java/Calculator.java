@@ -11,7 +11,12 @@ public class Calculator {
     BinaryOperator<Integer> divide = (x, y) ->  x / y;
 
 
-    UnaryOperator<Integer> pow = x -> x * x;
+    BinaryOperator<Integer> pow = (x, y) -> {
+        for(int i = 0; i < y - 1; i++) {
+            x *= x;
+        }
+        return x;
+    };
     UnaryOperator<Integer> abs = x -> x > 0 ? x : x * -1;
 
     Predicate<Integer> isPositive = x -> x > 0;

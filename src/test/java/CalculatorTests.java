@@ -1,9 +1,4 @@
-import com.sun.org.apache.xerces.internal.util.PropertyState;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
-
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -51,14 +46,33 @@ public class CalculatorTests {
     }
 
     @Test
-    public void testDivideByZero(){
+    public void testPow(){
         //arrange
-        int a = 24, b = 0;
-        var result = ArithmeticException.class;
+        int a = 3, b = 2, expected = 9;
         //act
-        Executable expected = ()->sut.divide.apply(a, b);
+        var result = sut.pow.apply(a, b);
         //assert
-        assertThat(result, typeCompatibleWith(expected.getClass()));
+        assertThat(result, equalTo(expected));
     }
 
+    @Test
+    public void testAbs(){
+        //arrange
+        int a = -3, expected = 3;
+        //act
+        var result = sut.abs.apply(a);
+        //assert
+        assertThat(result, equalTo(expected));
+    }
+
+    @Test
+    public void isPositive(){
+        //arrange
+        int a = 4;
+        boolean expected = true;
+        //act
+        var result = sut.isPositive.test(a);
+        //assert
+        assertThat(result, equalTo(expected));
+    }
 }
