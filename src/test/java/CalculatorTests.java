@@ -12,7 +12,7 @@ public class CalculatorTests {
         //act
         var result = sut.plus.apply(a, b);
         //assert
-        assertThat(result, equalTo(expected));
+        assertThat(expected, equalTo(result));
     }
 
     @Test
@@ -22,7 +22,7 @@ public class CalculatorTests {
         //act
         var result = sut.minus.apply(a, b);
         //assert
-        assertThat(result, equalTo(expected));
+        assertThat(expected, equalTo(result));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class CalculatorTests {
         //act
         var result = sut.multiply.apply(a, b);
         //assert
-        assertThat(result, equalTo(expected));
+        assertThat(expected, equalTo(result));
     }
 
     @Test
@@ -42,7 +42,7 @@ public class CalculatorTests {
         //act
         var result = sut.divide.apply(a, b);
         //assert
-        assertThat(result, equalTo(expected));
+        assertThat(expected, equalTo(result));
     }
 
     @Test
@@ -52,7 +52,7 @@ public class CalculatorTests {
         //act
         var result = sut.pow.apply(a, b);
         //assert
-        assertThat(result, equalTo(expected));
+        assertThat(expected, equalTo(result));
     }
 
     @Test
@@ -62,7 +62,7 @@ public class CalculatorTests {
         //act
         var result = sut.abs.apply(a);
         //assert
-        assertThat(result, equalTo(expected));
+        assertThat(expected, equalTo(result));
     }
 
     @Test
@@ -73,6 +73,6 @@ public class CalculatorTests {
         //act
         var result = sut.isPositive.test(a);
         //assert
-        assertThat(result, equalTo(expected));
+        assertThat(expected, equalTo(result));
     }
 }
