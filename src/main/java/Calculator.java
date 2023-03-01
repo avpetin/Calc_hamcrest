@@ -8,7 +8,10 @@ public class Calculator {
     BinaryOperator<Integer> plus = Integer::sum;
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
-    BinaryOperator<Integer> divide = (x, y) ->  x / y;
+    BinaryOperator<Integer> divide = (x, y) ->  {
+        if(y != 0) return x / y;
+        return y;
+    };
 
 
     BinaryOperator<Integer> pow = (x, y) -> {
