@@ -1,4 +1,7 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -72,6 +75,16 @@ public class CalculatorTests {
         boolean expected = true;
         //act
         var result = sut.isPositive.test(a);
+        //assert
+        assertThat(expected, equalTo(result));
+    }
+
+    @Test
+    public void testDivideByZero(){
+        //arrange
+        int a = 24, b = 0, expected = Integer.MAX_VALUE;
+        //act
+        var result = sut.divide.apply(a, b);
         //assert
         assertThat(expected, equalTo(result));
     }

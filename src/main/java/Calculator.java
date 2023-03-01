@@ -10,7 +10,7 @@ public class Calculator {
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
     BinaryOperator<Integer> divide = (x, y) ->  {
         if(y != 0) return x / y;
-        return y;
+        return Integer.MAX_VALUE;
     };
 
 
