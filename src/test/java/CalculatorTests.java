@@ -1,6 +1,4 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -19,7 +17,7 @@ public class CalculatorTests {
     }
 
     @Test
-    public void testSubtraction(){
+    public void testSubtraction() {
         //arrange
         int a = 14, b = 6, expected = 8;
         //act
@@ -29,7 +27,7 @@ public class CalculatorTests {
     }
 
     @Test
-    public void testMultiply(){
+    public void testMultiply() {
         //arrange
         int a = 7, b = 6, expected = 42;
         //act
@@ -39,7 +37,7 @@ public class CalculatorTests {
     }
 
     @Test
-    public void testDivide(){
+    public void testDivide() {
         //arrange
         int a = 24, b = 7, expected = 3;
         //act
@@ -49,7 +47,7 @@ public class CalculatorTests {
     }
 
     @Test
-    public void testPow(){
+    public void testPow() {
         //arrange
         int a = 3, b = 2, expected = 9;
         //act
@@ -59,7 +57,7 @@ public class CalculatorTests {
     }
 
     @Test
-    public void testAbs(){
+    public void testAbs() {
         //arrange
         int a = -3, expected = 3;
         //act
@@ -69,7 +67,7 @@ public class CalculatorTests {
     }
 
     @Test
-    public void isPositive(){
+    public void isPositive() {
         //arrange
         int a = 4;
         boolean expected = true;
@@ -80,7 +78,7 @@ public class CalculatorTests {
     }
 
     @Test
-    public void testDivideByZero(){
+    public void testDivideByZero() {
         //arrange
         int a = 24, b = 0, expected = Integer.MAX_VALUE;
         //act
